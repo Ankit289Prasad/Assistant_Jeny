@@ -5,7 +5,7 @@ class info():
     def __init__(self):
         self.driver = webdriver.Chrome(executable_path='chromedriver.exe')
 
-    def get_info(self,query):
+    def get_info(self, query):
         self.query = query
         self.driver.get(url="https://wikipedia.org/")
         search = self.driver.find_element_by_xpath('//*[@id="searchInput"]')  #xpath of an element is found by doing inspect on it and copy>copy xpath
@@ -23,7 +23,7 @@ class info():
         engine.say(readable_text)
         engine.runAndWait()
 
-bot = info()
-bot.get_info("Narendra Modi")
+#bot = info()
+#bot.get_info("Narendra Modi")
 
 
