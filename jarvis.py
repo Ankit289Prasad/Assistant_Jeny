@@ -71,6 +71,9 @@ elif "meaning" in text1:
 
 elif "play" in text1:
     bot = music()
+    engine.say("Okay buddy!! Playing '"+text1.split('play ')[1]+"'.")
+    print("Jeny : Okay buddy!! Playing '" + text1.split('play ')[1].capitalize() + "'.")
+    engine.runAndWait()
     bot.play(text1.split('play')[1])
 
 elif "review" in text1:
@@ -83,6 +86,11 @@ elif "review" in text1:
 elif "recommend" in text1 or ("suggest" in text1 and "movie" in text1):
     bot = recom()
     bot.recom_info()
+
+elif "joke" in text1:
+    engine.say("You look good today!")
+    print("Jeny : You look good today!")
+    engine.runAndWait()
 
 
 
