@@ -9,5 +9,5 @@ class recom():
         select1 = self.driver.find_element_by_xpath('//*[@id="lister-sort-by-options"]/option[2]')
         select1.click()
 
-bot = recom()
-bot.recom_info()
+#bot = recom()
+#bot.recom_info()
