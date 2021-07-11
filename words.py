@@ -18,13 +18,13 @@ def mean(name):
                 s = ele
                 if s.split()[0] == name and C == 0:
                     engine.say("The meaning of '"+name+"' is"+s.split(')')[1])
-                    print("The meaning of '"+name+"' is :"+s.split(')')[1])
+                    print("Jeny : The meaning of '"+name+"' is :"+s.split(')')[1])
                     engine.runAndWait()
                     C = 1
 
         if C==0:
             engine.say("Sorry buddy!! Unable to find the meaning of '"+name+"'.")
-            print("Sorry buddy!! Unable to find the meaning of '" + name + "'.")
+            print("Jeny : Sorry buddy!! Unable to find the meaning of '" + name + "'.")
             engine.runAndWait()
 
 #mean("jarvis")

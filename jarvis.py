@@ -66,3 +66,9 @@ if "information" in text1:
             print(e)
             engine.runAndWait()
 
+if "meaning" in text1:
+    mean(text1.split()[-1])
+
+
+
+
