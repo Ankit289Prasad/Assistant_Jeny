@@ -102,10 +102,10 @@ while i == 0 or i == 2:
         engine.runAndWait()
 
     else:
+        sR = sr.Recognizer()
         engine.say("Want to continue? (Yes/No)")
         print("Jeny : Want to continue? (Yes/No)")
         engine.runAndWait()
-        sR = sr.Recognizer()
         with sr.Microphone() as source2:
             audio3 = sR.listen(source2)
             try:
