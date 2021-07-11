@@ -8,14 +8,17 @@ from words import *
 
 r1 = sr.Recognizer()
 engine = p.init()
-engine.say("Hello buddy!! I am Jeny, how may I help you?")
-print("Jeny : Hello buddy!! I am Jeny, how may I help you?")
+engine.say("Hello buddy!! I am Jeny")
+print("Jeny : Hello buddy!! I am Jeny.")
 engine.runAndWait()
 with sr.Microphone() as source:
+    engine.say('how may I help you?')
+    print("Jeny : How may I help you?")
+    engine.runAndWait()
     audio = r1.listen(source)
     try:
         text = r1.recognize_google(audio)
-        print("You  : "+text)
+        print("You  : "+text.capitalize())
     except sr.UnknownValueError:
         engine.say("Unable to Understand!")
         print("Jeny : Unable to Understand!")
