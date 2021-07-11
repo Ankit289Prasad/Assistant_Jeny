@@ -27,7 +27,7 @@ with sr.Microphone() as source:
         engine.say(e)
         print(e)
         engine.runAndWait()
-i=0;
+i = 0
 while i == 0 or i == 2:
     i = 0
     engine.say('how may I help you?')
@@ -50,6 +50,7 @@ while i == 0 or i == 2:
 
     r3 = sr.Recognizer()
     if "information" in text1:
+        text1 = ""
         engine.say("Information about what?")
         print("Jeny : Information about what?")
         engine.runAndWait()
@@ -70,6 +71,7 @@ while i == 0 or i == 2:
 
     elif "meaning" in text1:
         mean(text1.split()[-1])
+        text1 = ""
 
     elif "play" in text1:
         bot = music()
@@ -77,6 +79,7 @@ while i == 0 or i == 2:
         print("Jeny : Okay buddy!! Playing '" + text1.split('play ')[1].capitalize() + "'.")
         engine.runAndWait()
         bot.play(text1.split('play')[1])
+        text1 = ""
 
     elif "review" in text1:
         bot = movie()
@@ -84,15 +87,18 @@ while i == 0 or i == 2:
             bot.movie_review(text1.split('Review')[0])
         else:
             bot.movie_review(text.split('Review of')[1])
+        text1 = ""
 
     elif "recommend" in text1 or ("suggest" in text1 and "movie" in text1):
         bot = recom()
         bot.recom_info()
+        text1 = ""
 
     elif "joke" in text1:
         engine.say("You look good today!")
         print("Jeny : You look good today!")
         engine.runAndWait()
+        text1 = ""
 
     else:
         i = 2
