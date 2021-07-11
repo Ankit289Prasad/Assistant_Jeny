@@ -66,8 +66,24 @@ if "information" in text1:
             print(e)
             engine.runAndWait()
 
-if "meaning" in text1:
+elif "meaning" in text1:
     mean(text1.split()[-1])
+
+elif "play" in text1:
+    bot = music()
+    bot.play(text1.split('play')[1])
+
+elif "review" in text1:
+    bot = movie()
+    if text1.split()[0] != "Review":
+        bot.movie_review(text1.split('Review')[0])
+    else:
+        bot.movie_review(text.split('Review of')[1])
+
+elif "recommend" in text1 or ("suggest" in text1 and "movie" in text1):
+    bot = recom()
+    bot.recom_info()
+
 
 
 
