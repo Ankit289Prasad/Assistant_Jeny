@@ -27,4 +27,4 @@ def mean(name):
             print("Sorry buddy!! Unable to find the meaning of '" + name + "'.")
             engine.runAndWait()
 
-mean("jarvis")
+#mean("jarvis")
