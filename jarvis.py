@@ -29,6 +29,7 @@ with sr.Microphone() as source:
         engine.runAndWait()
 i=0;
 while i == 0 or i == 2:
+    i = 0
     engine.say('how may I help you?')
     print("Jeny : How may I help you?")
     engine.runAndWait()
@@ -111,9 +112,9 @@ while i == 0 or i == 2:
             try:
                 cond = sR.recognize_google(audio3)
                 print("You  : "+cond.capitalize())
-                if cond in "yes" and cond not in "no":
+                if "yes" in cond and "no" not in cond:
                     i = 0
-                elif cond in "no" and cond not in "yes":
+                elif "no" in cond and "yes" not in cond:
                     i = -1
                 else:
                     i = -1
